@@ -17,7 +17,7 @@ public class RollercoasterTest {
     public void setUp() {
         rollerCoaster = new RollerCoaster("Blue Ridge", 10);
         visitor_1 = new Visitor(11, 140, 10 );
-        visitor_2 = new Visitor(11, 160, 10);
+        visitor_2 = new Visitor(11, 201, 10);
         visitor_3 = new Visitor(16, 160, 10);
     }
 
@@ -50,4 +50,7 @@ public class RollercoasterTest {
 
     @Test
     public void priceForTall(){assertEquals(16.8, rollerCoaster.priceFor(visitor_2), 0.1);}
+
+    @Test
+    public void priceFor__NotTall(){assertEquals(8.40, rollerCoaster.priceFor(visitor_1), 0.1);}
 }
